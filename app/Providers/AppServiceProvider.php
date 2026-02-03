@@ -11,10 +11,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(
-            \App\Services\AiReviewService::class,
-            \App\Services\OpenAiReviewService::class
-        );
+        if (env('DEMO_MODE', false)) {
+            $this->app->bind(
+                \App\Services\AiReviewService::class,
+                \App\Services\MockAiReviewService::class
+            );
+        } else {
+            $this->app->bind(
+                \App\Services\AiReviewService::class,
+                \App\Services\OpenAiReviewService::class
+            );
+        }
     }
 
     /**

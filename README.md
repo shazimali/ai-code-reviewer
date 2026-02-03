@@ -16,6 +16,8 @@ This application allows developers to submit code snippets or upload files to re
 
 ![AI Code Reviewer Interface](screenshots/app.png)
 
+![Mock Result Example](screenshots/mock-result.png)
+
 
 ## Requirements
 
@@ -50,12 +52,20 @@ This application allows developers to submit code snippets or upload files to re
    
    *Note: The project is pre-configured to ignore database connections, so you do not need to set up MySQL or SQLite.*
 
-5. **Generate App Key**
+5. **Demo Mode (Optional)**
+   If you want to run the project without an OpenAI API key (e.g., for a public demo), you can enable Demo Mode.
+   Open `.env` and set:
+   ```env
+   DEMO_MODE=true
+   ```
+   This will use a mock service that returns static reviews instead of calling the OpenAI API.
+
+6. **Generate App Key**
    ```bash
    php artisan key:generate
    ```
 
-6. **Run the Application**
+7. **Run the Application**
    ```bash
    php artisan serve
    ```
