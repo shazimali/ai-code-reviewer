@@ -12,6 +12,11 @@ This application allows developers to submit code snippets or upload files to re
 - **Dual Input**: Support for direct copy-paste or file uploads.
 - **Markdown Rendering**: Review results are formatted beautifully with Markdown.
 
+## Screenshots
+
+![AI Code Reviewer Interface](screenshots/app.png)
+
+
 ## Requirements
 
 - PHP 8.2 or higher
